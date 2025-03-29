@@ -25,6 +25,8 @@
 // Gossip Item Text
 #define GOSSIP_TEXT_BROWSE_GOODS        "I'd like to browse your goods."
 #define GOSSIP_TEXT_TRAIN               "Train me!"
+#define LOCALE_GOSSIP_TEXT_BROWSE_GOODS_6 "Quiero ver tus mercancías."
+#define LOCALE_GOSSIP_TEXT_SET_HOME_6   "Fijar mi hogar en esta taberna."
 
 enum eTradeskill
 {

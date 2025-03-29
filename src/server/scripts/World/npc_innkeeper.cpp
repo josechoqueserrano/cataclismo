@@ -67,15 +67,23 @@ public:
         if (creature->IsQuestGiver())
             player->PrepareQuestMenu(creature->GetGUID());
 
-        if (creature->IsVendor())
-            player->ADD_GOSSIP_ITEM(GOSSIP_ICON_VENDOR, GOSSIP_TEXT_BROWSE_GOODS, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_TRADE);
-
+            if (creature->IsVendor())
+            {
+                const char* localizedEntry;
+                switch (player->GetSession()->GetSessionDbcLocale())
+                {
+                    case LOCALE_esES: localizedEntry = LOCALE_GOSSIP_TEXT_BROWSE_GOODS_6; break;
+                    case LOCALE_enUS: default: localizedEntry = GOSSIP_TEXT_BROWSE_GOODS;
+                }
+                player->ADD_GOSSIP_ITEM(GOSSIP_ICON_VENDOR, localizedEntry, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_TRADE);
+            }
         if (creature->IsInnkeeper())
         {
             const char* localizedEntry;
             switch (player->GetSession()->GetSessionDbcLocale())
             {
                 case LOCALE_deDE: localizedEntry = LOCALE_INNKEEPER_3; break;
+                case LOCALE_esES: localizedEntry = LOCALE_GOSSIP_TEXT_SET_HOME_6; break;
                 case LOCALE_enUS: default: localizedEntry = LOCALE_INNKEEPER_0;
             }
             player->ADD_GOSSIP_ITEM(GOSSIP_ICON_INTERACT_1, localizedEntry, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INN);
