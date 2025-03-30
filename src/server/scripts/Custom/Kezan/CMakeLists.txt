@@ -13,12 +13,6 @@
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
 #  ${sources_Custom}
+    ${CMAKE_CURRENT_LIST_DIR}/npc_sister_gold_skimmer.cpp
 )
-
-
-
-if(SCRIPTS)
-  include(${CMAKE_CURRENT_SOURCE_DIR}/Kezan/CMakeLists.txt)
-endif()
-
-message("  -> Prepared: Custom")
+message("  -> Prepared: Kezan")
