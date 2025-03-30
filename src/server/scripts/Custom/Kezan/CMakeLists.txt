@@ -8,7 +8,7 @@
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-# file(GLOB_RECURSE sources_Custom Custom/*.cpp Custom/*.h)
+# file(GLOB_RECURSE sources_Custom Kezan/*.cpp Custom/*.h)
 
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
